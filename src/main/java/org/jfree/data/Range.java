@@ -87,7 +87,7 @@ public strictfp class Range implements Serializable {
      * @param upper  the upper bound (must be &gt;= lower bound).
      */
     public Range(double lower, double upper) {
-        if (lower > upper) {
+	    if (lower >= upper) {
             String msg = "Range(double, double): require lower (" + lower
                 + ") <= upper (" + upper + ").";
             throw new IllegalArgumentException(msg);
